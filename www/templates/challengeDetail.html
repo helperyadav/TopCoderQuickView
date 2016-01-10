@@ -1,0 +1,26 @@
+<ion-view view-title="Active challenges">
+  
+  <ion-content>
+    <h4><a href="https://www.topcoder.com/challenge-details/{{challenge.challengeId}}">{{challenge.challengeName}}</a></h4>
+    <ion-list>
+      <ion-item>
+        Type: {{challenge.type}}
+      </ion-item>
+      <ion-item>
+        challengeType: {{challenge.challengeType}} 
+      </ion-item>
+      <ion-item>
+        Start: {{challenge.postingDate  | date : 'MM.dd.yyyy'}} 
+      </ion-item>
+      <ion-item>  
+        End: {{challenge.submissionEndDate | date : 'MM.dd.yyyy'}}
+      </ion-item>
+      <ion-item ng-hide=" challenge.prize.length==0">
+        Prize: {{'$' + challenge.prize.join(', $')}}
+      </ion-item>
+    </ion-list>
+    
+    <p class="panel-body"  ng-bind-html="challenge.detailedRequirements"></p>
+     
+   </ion-content>
+</ion-view>
