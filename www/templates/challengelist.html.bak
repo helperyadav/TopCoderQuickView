@@ -4,13 +4,9 @@
       <ion-item ng-class="isLoading ? 'show' : 'hide'">
         <p>Refreshing... <ion-spinner></ion-spinner></p>
       </ion-item>
-      <label class="item item-input">
-        <i class="icon ion-search placeholder-icon"></i>
-        <input id='SearchBox' ng-model="SearchBox" type="search" placeholder="Search">
-      </label>
-      <ion-item ng-repeat="challenge in chellenges | challengeType:settings | filter:SearchBox" href="#/app/challengelist/{{challenge.challengeId}}">
+      <ion-item ng-repeat="challenge in chellenges | challengeType:settings" href="#/app/challengelist/{{challenge.challengeId}}">
         <p>{{challenge.challengeName}}</p>
-        <h3 ng-hide="challenge.technologies.length==0" >Tech: {{challenge.technologies}}</h3>
+        <h3 ng-hide="challenge.technologies.length==0" >Tech: {{challenge.technologies.toString()}}</h3>
         <ion-badge ng-hide="challenge.prize.length==0">Prize: {{'$' + challenge.prize.join(', $')}}</ion-badge>
         <h3>{{challenge.challengeType}}
       </ion-item>

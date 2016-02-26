@@ -1,4 +1,4 @@
-<ion-view view-title="{{challenge.type}}">
+<ion-view view-title="Active challenges">
   
   <ion-content>
     <h4><a href="https://www.topcoder.com/challenge-details/{{challenge.challengeId}}">{{challenge.challengeName}}</a></h4>
