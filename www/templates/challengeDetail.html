@@ -1,7 +1,7 @@
 <ion-view view-title="{{challenge.type}}">
   
   <ion-content>
-    <h4><a href="https://www.topcoder.com/challenge-details/{{challenge.challengeId}}">{{challenge.challengeName}}</a></h4>
+    <h4><a onclick="window.open('https://www.topcoder.com/challenge-details/{{challenge.challengeId}}', '_system', 'location=yes'); return false;" >{{challenge.challengeName}}</a></h4>
     <ion-list>
       <ion-item>
         Type: {{challenge.type}}

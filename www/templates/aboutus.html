@@ -1,0 +1,17 @@
+<ion-view view-title="About Us">
+  
+    <ion-content>
+    <ul class="list">
+      <li class="item item-toggle" ng-repeat="f in settings.FilterTypes">
+        {{f.type}}
+        <label class="toggle">
+          
+          <input type="checkbox" ng-checked="f.show"  ng-click="saveSetting()" ng-model="f.show">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>

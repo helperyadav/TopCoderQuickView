@@ -52,7 +52,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-  
+  .state('app.aboutus', {
+    url: '/aboutus',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/aboutus.html',
+      }
+    }
+  })
   .state('app.settings', {
     url: '/settings',
     views: {
