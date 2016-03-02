@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ghanshyam.topcoderapp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Top Coder Challanges.</name>
+  <name>Top Coder Quick View.</name>
   <description>
-        This is an application to check Top Coder Challenges using this mobileapp.
+        This is an application to check Top Coder Challenges using this mobile app.
     </description>
   <author email="yadav.ghanshyam@gmail.com" href="http://example.com/">
       Your Name Here
