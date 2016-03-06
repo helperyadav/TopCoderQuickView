@@ -1,17 +1,23 @@
 <ion-view view-title="About Us">
   
     <ion-content>
-    <ul class="list">
-      <li class="item item-toggle" ng-repeat="f in settings.FilterTypes">
-        {{f.type}}
-        <label class="toggle">
-          
-          <input type="checkbox" ng-checked="f.show"  ng-click="saveSetting()" ng-model="f.show">
-          <div class="track">
-            <div class="handle"></div>
-          </div>
-        </label>
-      </li>
-    </ul>
+        <div class="list card " >
+            <div class="item item-image">
+                <img style="width:40%" src="./img/bhupendra.jpg">
+            </div>
+            <div class="button-bar">
+                <a class="button button-icon ion-social-linkedin" onclick="window.open('https://www.linkedin.com/in/bhupendra-yadav-03211013?trk=hp-identity-name', '_system', 'location=yes'); return false;"> Bhupendra Yadav</a>
+            </div>
+        </div>
+        <div class="list card " >
+            <div class="item item-image">
+                <img style="width:40%" src="./img/ghanshyam.jpg">
+                
+            </div>
+            <div class="button-bar">
+                <a class="button button-icon ion-social-linkedin" onclick="window.open('https://www.linkedin.com/in/ghanshyam-yadav-97b5137', '_system', 'location=yes'); return false;"> Ghanshyam Yadav</a>
+            </div>
+        </div>
+        <a class="button button-block button-positive icon-right ion-android-mail" ng-click="SendEmail()"> Feed Back </a>
   </ion-content>
 </ion-view>

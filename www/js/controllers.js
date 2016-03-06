@@ -120,6 +120,36 @@ angular.module('starter.controllers', ['starter.services'])
   $scope.init();
 })
 
+/** About Us Controller **/
+.controller('aboutusCtrl', function($scope) {
+        $scope.SendEmail = function(){
+            //window.plugins.emailComposer.showEmailComposerWithCallback(callback, subject, body, toRecipients, ccRecipients, bccRecipients, isHtml, attachments, attachmentsData);
+            console.log("Send Email here");
+            
+            $scope.Error = "";
+            if(window.plugins && window.plugins.emailComposer) {
+                
+                //console.log(" email Composer is being called. :)");
+                window.plugins.emailComposer.showEmailComposerWithCallback(function(result) {
+                    
+                    console.log("Response -> " + result);
+                }, 
+                "Feedback for TopCoder Quick View App.", // Subject
+                "I am you this app and below are some of the improvements i will look for: \n ",// Body
+                ["bhupendraSyadav@gmail.com", "yadav.ghanshyam@gmail.com"],    // To
+                null,                    // CC
+                null,                    // BCC
+                false,                   // isHTML
+                null,                    // Attachments
+                null);                   // Attachment Data
+            }else{
+                $scope.Error += " Please setup and email account to use this feature.";
+                console.log(" Email Composer is not found. :()");
+                //$scope.Error += "windows.Pluging: "+ window.plugins +" emailComposer:"+ window.plugins.emailComposer;
+            };
+        };
+  
+})
 .filter('challengeType', function() {
   return function(challenges, Settings){
     if(Settings.FilterTypes.length != undefined){
