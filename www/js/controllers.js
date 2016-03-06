@@ -135,7 +135,7 @@ angular.module('starter.controllers', ['starter.services'])
                     console.log("Response -> " + result);
                 }, 
                 "Feedback for TopCoder Quick View App.", // Subject
-                "I am you this app and below are some of the improvements i will look for: \n ",// Body
+                "I am using this app and below are some of the improvements i would like to have in future release: \n\n ",// Body
                 ["bhupendraSyadav@gmail.com", "yadav.ghanshyam@gmail.com"],    // To
                 null,                    // CC
                 null,                    // BCC
